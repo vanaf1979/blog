@@ -54,8 +54,6 @@ class FrontEnd extends Theme {
 
     public function return_maintanance_headers() {
 
-        exit;
-        
         if( $_SERVER['SERVER_NAME'] == 'vanaf1979.nl' ) {
             
             if( ! isset( $_SERVER["HTTP_CF_CONNECTING_IP"] ) || $_SERVER["HTTP_CF_CONNECTING_IP"] != '84.86.137.222' ) {
