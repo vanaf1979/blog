@@ -29,7 +29,7 @@ class Admin extends Theme {
 
         if( $page == 'post.php' ) {
 
-            wp_enqueue_style( $this->text_domain . '-css' , $this->theme_path . '/public/css/admin.css' , array() , $this->version , 'all' );
+            // wp_enqueue_style( $this->text_domain . '-css' , $this->theme_path . '/public/css/admin.css' , array() , $this->version , 'all' );
 
         }
 
@@ -40,7 +40,7 @@ class Admin extends Theme {
 
         if( $page == 'post.php' ) {
 
-            wp_enqueue_script( $this->text_domain . '-js' , $this->theme_path . '/public/js/admin.js' , array() , $this->version , true );
+           //  wp_enqueue_script( $this->text_domain . '-js' , $this->theme_path . '/public/js/admin.js' , array() , $this->version , true );
 
         }
 
