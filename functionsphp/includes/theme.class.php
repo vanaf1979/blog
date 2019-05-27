@@ -35,7 +35,7 @@ class Theme {
 
         $this->text_domain = $theme->get( 'TextDomain' );
 
-        $this->theme_path = str_replace( 'http://' , 'https://', get_stylesheet_directory_uri() );
+        $this->theme_path = get_stylesheet_directory_uri();
 
     }
 
