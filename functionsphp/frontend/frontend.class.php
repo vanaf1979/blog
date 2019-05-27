@@ -54,20 +54,20 @@ class FrontEnd extends Theme {
 
     public function return_maintanance_headers() {
 
-        if( $_SERVER['SERVER_NAME'] == 'vanaf1979.nl' ) {
+        // if( $_SERVER['SERVER_NAME'] == 'vanaf1979.nl' ) {
             
-            if( ! isset( $_SERVER["HTTP_CF_CONNECTING_IP"] ) || $_SERVER["HTTP_CF_CONNECTING_IP"] != '84.86.137.222' ) {
+        //     if( ! isset( $_SERVER["HTTP_CF_CONNECTING_IP"] ) || $_SERVER["HTTP_CF_CONNECTING_IP"] != '84.86.137.222' ) {
 
-                header('HTTP/1.1 503 Service Temporarily Unavailable');
-                header('Status: 503 Service Temporarily Unavailable');
-                header('Retry-After: 3600');
+        //         header('HTTP/1.1 503 Service Temporarily Unavailable');
+        //         header('Status: 503 Service Temporarily Unavailable');
+        //         header('Retry-After: 3600');
 
-                wp_die( 'This site is currently not available due to maintanance.', 'Service Temporarily Unavailable', array( 'response' => 503 ) );
-                exit;
+        //         wp_die( 'This site is currently not available due to maintanance.', 'Service Temporarily Unavailable', array( 'response' => 503 ) );
+        //         exit;
     
-            }
+        //     }
 
-        }
+        // }
         
     }
 
