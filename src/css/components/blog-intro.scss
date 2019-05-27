@@ -1,0 +1,113 @@
+
+.blog-intro {
+    // display: block;
+    // border-bottom: solid 1px #eeeeee;
+    // margin-bottom: 40px;
+}
+    .blog-intro .img {
+        margin: 0px auto 10px auto;
+    }
+        .blog-intro .img h2  {
+            font-size: 40px;
+            font-weight: 200;
+            line-height: 50px;
+            color: #444f61;
+            text-transform: uppercase;
+        }
+            .blog-intro .img h2 a {
+                font-size: inherit;
+                color: inherit;
+                line-height: inherit;
+                font-weight: inherit;
+                text-decoration: none;
+                transition: all 0.2s ease;
+            }
+                .blog-intro .img h2 a:hover {
+                    text-decoration: none;
+                    color: #2186AD;
+                }
+        .blog-intro .img p {
+            display: inline-block;
+            margin: 0px 0px 25px 0px;
+            font-size: 14px;
+            color: #828282;
+        }
+            .blog-intro .img p a {
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .blog-intro .img p a:hover {
+                text-decoration: underline;
+            }
+
+        .blog-intro .img img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    
+
+    .blog-intro .text {
+        max-width: 840px;
+        margin: 0px auto 80px auto;
+        padding: 20px 30px 60px 30px;
+        border-bottom: solid 1px #eeeeee;
+    }
+        .blog-intro .text ul {
+            display: inline-block;
+            list-style: none;
+            margin: 0px 0px 15px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+            .blog-intro .text ul li {
+                display: inline-block;
+                margin: 0px 5px 0px 0px;
+                color: #828282;
+                font-size: 14px;
+                font-weight: 200;
+            }
+
+        .blog-intro .text p {
+            font-weight: 300;
+        }
+
+        .blog-intro .text a.readmore {
+            display: inline-block;
+            margin: 30px 0px 0px 0px;
+            padding: 10px 25px 10px 25px;
+            background: #444f61;
+            color: #ffffff;
+            transition: all 0.2s ease;
+        }
+            .blog-intro .text a.readmore:hover {
+                background: #2186AD;
+                text-decoration: none;
+            }
+
+@media screen and ( max-width: 1024px )
+{
+
+}
+
+@media screen and ( max-width: 768px )
+{
+    
+}
+
+@media screen and ( max-width: 568px )
+{
+    .blog-intro .text {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0px 60px 0px;
+    }
+
+    .blog-intro .img h2 {
+        font-size: 25px;
+        line-height: 2rem;
+    }
+}

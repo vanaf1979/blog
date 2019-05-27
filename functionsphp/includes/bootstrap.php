@@ -1,0 +1,25 @@
+
+<?php
+/* Configure autoloading */
+require_once get_template_directory( ) . '/functionsphp/includes/autoloader.class.php';
+
+use FunctionsPhp\includes\Autoloader as Autoloader;
+
+$autoloader = new Autoloader( 'FunctionsPhp' , get_template_directory( ) , '.class.php' );
+
+
+/* Run functions class */
+use \FunctionsPhp\FunctionsPhp as FunctionsPhp;
+
+function run_functionsphp() {
+
+    $functions = new FunctionsPhp();
+
+}
+
+run_functionsphp();
+
+
+use FunctionsPhp\Includes\Thm as Thm;
+
+$thm = new Thm();

@@ -1,0 +1,55 @@
+.latest-tweets {
+
+}
+.latest-tweets h4 {
+    display: none;
+}
+.latest-tweets ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    list-style: none;
+    margin: 20px 0px 40px 0px;
+    padding: 0px 0px 0px 0px;
+}
+    .latest-tweets ul li {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 16px;
+    }
+        .latest-tweets ul li:before {
+            content: "\f099";
+            font-family: "Font Awesome 5 Brands";
+            display: inline-block;
+            margin: 2px 15px 0px 0px;
+            width: 20px;
+            height: 20px;
+            float: left;
+            font-size: 25px;
+            color: #2186AD;
+        }
+    .latest-tweets ul li span {
+        display: block;
+        margin: 10px 0px 0px 0px;
+        font-size: 14px;
+        font-style: italic;
+        color: rgba(0,0,0,0.5);
+    }
+
+@media screen and ( max-width: 1024px )
+{
+
+}
+
+@media screen and ( max-width: 768px )
+{
+
+}
+
+@media screen and ( max-width: 568px )
+{
+    .latest-tweets ul {
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+    }
+}

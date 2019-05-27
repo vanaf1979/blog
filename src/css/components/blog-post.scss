@@ -1,0 +1,132 @@
+
+.blog-post{
+    // display: block;
+    // border-bottom: solid 1px #eeeeee;
+    // margin-bottom: 40px;
+}
+    .blog-post .img {
+        margin: 0px auto 10px auto;
+    }
+        .blog-post .img h2  {
+            font-size: 40px;
+            font-weight: 200;
+            line-height: 50px;
+            color: #444f61;
+            text-transform: uppercase;
+        }
+            .blog-post .img h2 a {
+                font-size: inherit;
+                color: inherit;
+                line-height: inherit;
+                font-weight: inherit;
+                text-decoration: none;
+                transition: all 0.2s ease;
+            }
+                .blog-post .img h2 a:hover {
+                    text-decoration: none;
+                    color: #2186AD;
+                }
+
+        .blog-post .img p {
+            display: inline-block;
+            margin: 0px 0px 25px 0px;
+            font-size: 14px;
+            color: #828282;
+        }
+            .blog-post .img p a {
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .blog-post .img p a:hover {
+                text-decoration: underline;
+            }
+
+        .blog-post .img img {
+            display: block;
+            margin: 0px 0px 40px 0px;
+            width: 100%;
+            height: auto;
+        }
+    
+
+    .blog-post .text {
+        max-width: 840px;
+        margin: 0px auto 40px auto;
+        padding: 20px 30px 60px 30px;
+    }
+        .blog-post .text ul {
+            padding: 0px 0px 0px 0px;
+        }
+
+        .blog-post .text a {
+            text-decoration: underline;
+        }
+
+        .blog-post .text .wp-block-coblocks-gist {
+            margin: 1.6rem 0px 3.2rem 0px;
+        }
+        
+        .blog-post .text figure {
+            margin: 1.4rem 0px 3.2rem 0px;
+        }
+
+        .blog-post .text figure.aligncenter {
+            display: block;
+            margin: 1.4rem auto 3.2rem auto;
+            text-align: center;
+        }
+            .blog-post .text figure.aligncenter img {
+                display: block;
+                margin: 0pc auto 0pc auto;
+                text-align: center;
+            }
+
+        .blog-post .text a {
+            transition: all 0.2s ease;
+        }
+            .blog-post .text a:hover {
+                text-decoration: none;
+                color: #2186AD;
+            }
+
+
+        .blog-post .text ul.tags {
+            display: inline-block;
+            list-style: none;
+            margin: 0px 0px 15px 0px;
+            padding: 0px 0px 15px 0px;
+        }
+            .blog-post .text ul.tags li {
+                display: inline-block;
+                margin: 0px 5px 0px 0px;
+                color: #828282;
+                font-size: 14px;
+                font-weight: 200;
+            }
+
+            @media screen and ( max-width: 1024px )
+{
+
+}
+
+@media screen and ( max-width: 768px )
+{
+
+}
+
+@media screen and ( max-width: 568px )
+{
+    .blog-post .img h2  {
+        font-size: 25px;
+        line-height: 2rem;
+
+    }
+	.blog-post .text {
+        max-width: 100%;
+        padding: 20px 0px 60px 0px;
+    }
+}

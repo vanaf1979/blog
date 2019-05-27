@@ -1,0 +1,95 @@
+
+.main-nav {
+    margin: 20px 0px 50px 0px;
+    height: 100px;
+}
+    .main-nav .logo {
+
+    }
+        .main-nav .logo a {
+            display: inline-block;
+            margin: 29px 0px 0px 0px;
+            font-size: 40px;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            color: #444f61;
+            text-decoration: none;
+            transition: aal 0.2s ease;
+        }
+            .main-nav .logo a:hover {
+                text-decoration: none;
+                color: #2186AD;
+            }
+            .main-nav .logo a i {
+                display: block;
+                padding: 0px 3px 0px 0px;
+                float: left;
+                font-size: 28px;
+                color: #444f61;
+                color: #444f61
+            }
+
+    .main-nav .menu {
+        text-align: right;
+    }
+        .main-nav .menu ul {
+            display: inline-block;
+            margin: 34px 0px 0px 0px;
+            list-style: none;
+            text-align: right;
+        }
+            .main-nav .menu ul li {
+                display: inline-block;
+                padding: 0px 0px 0px 20px;
+            }
+                .main-nav .menu ul li a {
+                    font-size: 18px;
+                    transition: all 0.2s ease;
+                    text-decoration: none;
+                }
+                    .main-nav .menu ul li a i {
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                    .main-nav .menu ul li a:hover {
+                        text-decoration: none;
+                        color: #2186AD;
+                    }
+    
+    a.mobile {
+        display: none;
+        font-size: 30px;
+        margin: 30px 0px 0px 0px;
+        text-align: right;
+        text-decoration: none;
+        font-weight: 900 !important;
+    }
+
+    .mm-menu {
+        z-index: 999;
+    }
+    
+@media screen and ( max-width: 1024px )
+{
+
+}
+
+@media screen and ( max-width: 768px )
+{
+    .main-nav .menu ul {
+        display: none;
+    }
+
+    a.mobile {
+        display: block;
+    }
+
+    #menu ul li i {
+        color: inherit;
+    }
+}
+
+@media screen and ( max-width: 568px )
+{
+    
+}

@@ -1,0 +1,109 @@
+
+.footer {
+    margin: 20px 0px 0px 0px;
+    padding: 40px 0px 40px 0px;
+    border-top: solid 1px #eeeeee;
+}
+    footer .socials {
+        display: block;
+        margin: 30px 0px 30px 0px;
+        padding: 0px 0px 4s0px 0px;
+        text-align: center;
+        border-bottom: solid 1px #efefef;
+    }
+        footer .socials h3 {
+            font-size: 30px;
+            padding: 0px 0px 20px 0px;
+        }
+        footer .socials ul {
+            display: inline-block;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            list-style: none;
+            text-align: center;
+        }
+            footer .socials ul li {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                margin: 0px 7px 0px 7px;
+                font-size: 40px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+                footer .socials ul li a {
+                    color: rgba(0, 0, 0, 0.5);
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                }
+                    footer .socials ul li a:hover {
+                        color: #2186AD;
+                    }
+
+    .footer .copy {
+        
+    }
+        .footer .copy p {
+            display: inline-block;
+            margin: 1px 0px 0px 0px;
+            font-size: 14px;
+        }
+            .footer .copy p a {
+                text-decoration: none;
+                transition: aal 0.2s ease;
+            }
+                .footer .copy p a:hover {
+                    color: #2186AD;
+                }
+
+    .footer .menu {
+        text-align: right;
+    }
+    .footer .menu ul {
+        display: inline-block;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        text-align: right;
+    }
+        .footer .menu ul li {
+            display: inline-block;
+            padding: 0px 0px 0px 10px;
+            font-size: 14px;
+        }
+            .footer .menu ul li a {
+                font-size: 14px;
+                transition: aal 0.2s ease;
+                text-decoration: none;
+            }
+                .footer .menu ul li a:hover {
+                    text-decoration: none;
+                    color: #2186AD;
+                }
+                
+@media screen and ( max-width: 1024px )
+{
+
+}
+
+@media screen and ( max-width: 768px )
+{
+    .footer .copy p {
+        display: block;
+        text-align: center;
+        margin: px 0px 0px 0px;
+        font-size: 14px;
+    }
+
+    .footer .menu ul {
+        display: block;
+        text-align: center;
+    }
+        .footer .menu ul li {
+            padding: 0px 5px 0px 5px;
+        }
+}
+
+@media screen and ( max-width: 568px )
+{
+    
+}

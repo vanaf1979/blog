@@ -1,0 +1,166 @@
+
+### / OPTIMIZATION
+
+### / DEFLATE COMPRESSION
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+### / GZIP COMPRESSION
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+### / EXPIRATION HEADERS
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "now plus 1 hour"
+  ExpiresByType text/css "now plus 1 week"
+  ExpiresByType application/javascript "now plus 1 week"
+  ExpiresByType application/x-javascript "now plus 1 week"
+  ExpiresByType image/bmp "now plus 1 month"
+  ExpiresByType image/gif "now plus 1 month"
+  ExpiresByType image/jpeg "now plus 1 month"
+  ExpiresByType image/jp2 "now plus 1 month"
+  ExpiresByType image/pipeg "now plus 1 month"
+  ExpiresByType image/png "now plus 1 month"
+  ExpiresByType image/svg+xml "now plus 1 month"
+  ExpiresByType image/tiff "now plus 1 month"
+  ExpiresByType image/vnd.microsoft.icon "now plus 1 month"
+  ExpiresByType image/x-icon "now plus 1 month"
+  ExpiresByType image/ico "now plus 1 month"
+  ExpiresByType image/icon "now plus 1 month"
+  ExpiresByType text/ico "now plus 1 month"
+  ExpiresByType application/ico "now plus 1 month"
+  ExpiresByType font/truetype "access plus 1 month"
+  ExpiresByType font/opentype "access plus 1 month"
+  ExpiresByType application/x-font-woff "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+</IfModule>
+
+### / CACHE-CONTROL HEADERS
+<ifModule mod_headers.c>
+  <filesMatch "\.(ico|jpe?g|png|gif|swf)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "private"
+  </filesMatch>
+  <filesMatch "\.(x?html?|php)$">
+    Header set Cache-Control "private, must-revalidate"
+  </filesMatch>
+</ifModule>
+
+
+### / REDIRECTS
+
+### / DOMAIN REDIRECTS
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTP_HOST} ^www\. [OR]
+RewriteCond %{HTTPS_HOST} !^vanaf1979\.nl [NC]
+RewriteRule ^(.*) https://vanaf1979.nl/$1 [L,NE,R=301]
+
+### / URL REDIRECTS
+RewriteEngine On
+Redirect 301 /blog-news/ /
+Redirect 301 /blog-news /
+Redirect 301 /genie-v2-0-released-open-source/ /
+Redirect 301 /genie-v2-0-released-open-source /
+Redirect 301 /free-wp-development-setup-2-local-test-server/ /
+Redirect 301 /free-wp-development-setup-2-local-test-server /
+Redirect 301 /quick-tip-fix-wordpress-anywhere/ /
+Redirect 301 /quick-tip-fix-wordpress-anywhere /
+Redirect 301 /free-wp-development-setup-1-coding-local/ /
+Redirect 301 /free-wp-development-setup-1-coding-local /
+
+### / URL SECTION REDIRECTS
+# RewriteRule ^cadeaushop/(.*)$ /hobby-cadeau-shop/$1 [R=302,NE,L]
+
+
+### / SECURITY
+
+### / PROTECT ADMIN AREA
+#AuthGroupFile /dev/null
+#AuthName "WordPress Admin Access Control"
+#AuthType Basic
+#<LIMIT GET>
+#order deny,allow
+#deny from all
+# whitelist Syed's IP address
+#allow from 84.86.137.222
+#</LIMIT>
+
+### / DISABLE DIRECTORY BROWSING
+Options -Indexes
+
+### / PROTECT WP-CONFIG.PHP
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+### / PROTECT .HTACCESS
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+### / BLOCK XMLRPC.PHP
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>
+
+### / BAN IP ADDRESSES
+<Limit GET POST>
+order allow,deny
+deny from xxx.xxx.xx.x
+allow from all
+</Limit>
+
+### / DISABLE HOTLINKEN OF IMAGES
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?binhminhitc.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?feeds2.feedburner.com/binhminhitc [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ – [NC,F,L]
+
+### / BLOCK AUTHOR SCANS
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY_STRING} (author=\d+) [NC]
+RewriteRule .* - [F]
