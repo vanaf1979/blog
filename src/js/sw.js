@@ -17,9 +17,8 @@ if ( workbox )
     ** PRECACHE:
     */
     workbox.precaching.precacheAndRoute([
-        { url: '/wp-content/themes/va79-base-theme/public/js/app.js', revision: vaRevision },
-        { url: '/wp-content/themes/va79-base-theme/public/css/header.css', revision: vaRevision },
-        { url: '/wp-content/themes/va79-base-theme/public/css/footer.css', revision: vaRevision }
+        { url: '/wp-content/themes/vanaf1978/public/js/app.js', revision: vaRevision },
+        { url: '/wp-content/themes/vanaf1978/public/css/app.css', revision: vaRevision }
     ]);
 
 

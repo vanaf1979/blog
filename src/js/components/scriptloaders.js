@@ -15,7 +15,7 @@ var ScriptLoaders = {
         if ( 'serviceWorker' in navigator )
         {
             window.addEventListener( 'load' , () => {
-                navigator.serviceWorker.register('/app/themes/vanaf1979/public/js/sw.js');
+                navigator.serviceWorker.register('/wp-content/themes/vanaf1979/public/js/sw.js');
             });
         }
     },
