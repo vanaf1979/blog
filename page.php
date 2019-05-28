@@ -16,7 +16,7 @@
 
         <main class="row">
 
-            <article class="blog-post row-center-wide"  itemscope itemtype="http://schema.org/TechArticle">
+            <article class="blog-post row-center-wide">
                 
                 <header class="img">
 
@@ -24,14 +24,14 @@
                     $post_author = get_the_author_meta('display_name', $post->post_author );
                     $post_date = date_format( date_create( $post->post_date ) ,"l, F d, o");
                     ?>
-                    <h2 itemprop="headline">
-                        <a href="<?php echo get_permalink( $post->ID ); ?>" itemprop="url"><?php echo $post->post_title; ?></a>
+                    <h2>
+                        <a href="<?php echo get_permalink( $post->ID ); ?>"><?php echo $post->post_title; ?></a>
                     </h2>
 
                     <?php 
                     $imglarge = $thm->get_image_src( $post , 'post-thumb-large' ); 
-                    $imgmedium = $thm->get_image_src( $testmed , 'post-thumb-medium' ); 
-                    $imgsmall = $thm->get_image_src( $testsmall , 'post-thumb-small' ); 
+                    $imgmedium = $thm->get_image_src( $post , 'post-thumb-medium' ); 
+                    $imgsmall = $thm->get_image_src( $post , 'post-thumb-small' ); 
                     ?>
                     <img alt="<?php echo $imglarge['alt']; ?>"
                         src="<?php echo $imglarge['src']; ?>"
@@ -52,22 +52,9 @@
 
                 <div class="text row-center">
 
-                    <div itemprop="articleBody">
+                    <div>
                         <?php echo $thm->get_content( $post ); ?>
                     </div>
-
-                    <ul itemprop="keywords">
-                        <?php
-                        $tags = array();
-                        $tags = wp_get_post_tags( $child->ID );
-                        $tags = array_reverse( $tags ); 
-                        foreach($tags as $tag) {
-                        ?>
-                        <li><?php echo $tag->name; ?></li>
-                        <?php
-                        }
-                        ?>
-                    </ul>
 
                 </div>
 
