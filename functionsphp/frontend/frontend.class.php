@@ -33,6 +33,8 @@ class FrontEnd extends Theme {
         wp_style_add_data( $this->text_domain . '-purecss-ie8' , 'conditional' , 'lte IE 8' );
         wp_enqueue_style( $this->text_domain . '-purecss-ie9' , 'https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css', array() , $this->version , 'all' );
 
+        wp_enqueue_style( $this->text_domain . '-raleway' , 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600&fdisplay=fallback', array() , '5.8.2' , 'all' );
+        wp_enqueue_style( $this->text_domain . '-open-sans' , 'https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=fallback', array() , '5.8.2' , 'all' );
         wp_enqueue_style( $this->text_domain . '-fontawesome' , 'https://use.fontawesome.com/releases/v5.8.2/css/all.css', array() , '5.8.2' , 'all' );
 
         // App
