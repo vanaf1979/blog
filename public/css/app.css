@@ -3741,3 +3741,8 @@ footer .socials ul li a:hover {
     padding: 0px 5px 0px 5px;
   }
 }
+@media screen and (max-width: 568px) {
+  footer .socials ul li {
+    margin: 0px 25px 25px 25px;
+  }
+}
