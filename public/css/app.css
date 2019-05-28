@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600);@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);@charset "UTF-8";
+@charset "UTF-8";
 /* Import NPM Modules */
-/* Import External Fonts */
 /* Import utilities */
 .va-formwrap {
   display: block;
