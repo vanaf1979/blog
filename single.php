@@ -16,7 +16,7 @@
 
         <main class="row">
 
-            <article class="blog-post row-center-wide"  itemscope itemtype="http://schema.org/TechArticle">
+            <article class="blog-post row-center-wide"  itemscope itemtype="http://schema.org/Article">
                 
                 <header class="img">
 

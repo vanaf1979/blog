@@ -19,7 +19,7 @@
      
             <?php $thm->get_posts( $post , function( $child ) use ( $thm ) { ?>
 
-            <article class="blog-intro row-center-wide"  itemscope itemtype="http://schema.org/TechArticle">
+            <article class="blog-intro row-center-wide"  itemscope itemtype="http://schema.org/Article">
                 
                 <header class="img">
 
