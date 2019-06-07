@@ -151,12 +151,40 @@ __webpack_require__.r(__webpack_exports__);
 
 var LazyLoading = {
   init: function init() {
-    this.lazyLoadImages();
+    this.dependOnIntersectionObserver();
+  },
+  dependOnIntersectionObserver: function dependOnIntersectionObserver() {
+    var _this = this;
+
+    if (!('IntersectionObserver' in window) || !('IntersectionObserverEntry' in window) || !('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
+      this.addScript('https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js', function () {
+        _this.lazyLoadImages();
+      });
+    } else {
+      this.lazyLoadImages();
+    }
   },
   lazyLoadImages: function lazyLoadImages() {
     var lazyLoadInstance = new vanilla_lazyload__WEBPACK_IMPORTED_MODULE_0___default.a({
       elements_selector: ".lazy"
     });
+  },
+  addScript: function addScript() {
+    var script = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var element = document.createElement('script');
+    element.type = 'text/javascript';
+    element.async = true;
+    element.src = script;
+    parent = 'body';
+
+    if (callback != null && typeof callback === "function") {
+      element.onload = function () {
+        callback();
+      };
+    }
+
+    document[parent].appendChild(element);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (LazyLoading);
