@@ -17,6 +17,19 @@
         padding: 0px 0px 0px 0px;
         font-size: 16px;
     }
+        .latest-tweers ul li,
+        .latest-tweers ul li a {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -ms-word-break: break-all;
+            word-break: break-all;
+            word-break: break-word;
+            -ms-hyphens: auto;
+            -moz-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+        
         .latest-tweets ul li:before {
             content: "\f099";
             font-family: "Font Awesome 5 Brands";

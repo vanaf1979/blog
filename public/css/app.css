@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* Import NPM Modules */
 /* Import utilities */
-.va-formwrap {
+.va-formwrap,
+.wpcf7-form-control-wrap {
   display: block;
   width: auto;
   clear: both;
@@ -35,7 +36,6 @@ label {
   font-size: 1rem;
   display: inline-block;
   width: auto;
-  color: #11aaac;
   margin: 0px 0px 4px 0px;
   padding: 0px 0px 0px 0px;
 }
@@ -3602,6 +3602,18 @@ a.mobile {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   font-size: 16px;
+}
+
+.latest-tweers ul li,
+.latest-tweers ul li a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .latest-tweets ul li:before {
