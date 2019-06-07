@@ -39,18 +39,18 @@
                         $imgmedium = $thm->get_image_src( $child , 'post-thumb-medium' ); 
                         $imgsmall = $thm->get_image_src( $child , 'post-thumb-small' ); 
                         ?>
-                        <img alt="<?php echo $imglarge['alt']; ?>"
-                            src="<?php echo $imglarge['src']; ?>"
-                            srcset="
+                        
+                        <img alt="<?php echo $imglarge['alt']; ?>" class="lazy" 
+                            data-src="<?php echo $imglarge['src']; ?>" 
+                            data-srcset="
                                 <?php echo $imglarge['src']; ?> 1000w,
                                 <?php echo $imgmedium['src']; ?> 700w,
-                                <?php echo $imgsmall['src']; ?> 334w
-                            "
-                            sizes="
+                                <?php echo $imgsmall['src']; ?> 334w"
+                            data-sizes="
                                 (min-width: 769px) 1000px,
                                 (min-width: 569px) 700px,
                                 (min-width: 1px) 334px,
-                                100vw  
+                                100vw
                             "
                         />
                     </a>

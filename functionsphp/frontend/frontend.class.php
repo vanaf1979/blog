@@ -48,6 +48,9 @@ class FrontEnd extends Theme {
         // jQuery
         wp_enqueue_script( $this->text_domain . '-jquery' , 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js' , array() , $this->version , true );
         
+        // Intersection Observer Polyfill
+        wp_enqueue_script( $this->text_domain . '-intersection-observer' , 'https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js' , array() , $this->version , true );
+
         // App
         wp_enqueue_script( $this->text_domain . '-app' , $this->theme_path . '/public/js/app.js' , array() , $this->version , true );
 
