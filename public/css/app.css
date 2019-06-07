@@ -3591,7 +3591,9 @@ a.mobile {
 
 .latest-tweets ul {
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-column-gap: 40px;
   list-style: none;
   margin: 20px 0px 40px 0px;
@@ -3599,21 +3601,19 @@ a.mobile {
 }
 
 .latest-tweets ul li {
+  width: 100%;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   font-size: 16px;
 }
 
-.latest-tweers ul li,
-.latest-tweers ul li a {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+.latest-tweets ul li,
+.latest-tweets ul li a {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  -webkit-hyphens: auto !important;
+  -ms-hyphens: auto !important;
+  hyphens: auto !important;
 }
 
 .latest-tweets ul li:before {
