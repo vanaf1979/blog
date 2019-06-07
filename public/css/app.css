@@ -3604,6 +3604,18 @@ a.mobile {
   font-size: 16px;
 }
 
+.latest-tweers ul li,
+.latest-tweers ul li a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 .latest-tweets ul li:before {
   content: "\F099";
   font-family: "Font Awesome 5 Brands";
