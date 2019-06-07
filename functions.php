@@ -3,7 +3,7 @@
 Theme Name:         Vanaf1979
 Theme URI:          https://vanaf1979.nl/
 Description:        Therme for vanaf1979.nl
-Version:            1.0.3
+Version:            1.0.4
 Author:             Vanaf1979
 Author URI:         https://vanaf1979.nl
 Text Domain:        vanaf1979
