@@ -1,5 +1,6 @@
 
-.va-formwrap {
+.va-formwrap,
+.wpcf7-form-control-wrap {
   display: block;
   width: auto;
   clear: both;
@@ -33,7 +34,7 @@ label {
   font-size: 1rem;
   display: inline-block;
   width: auto;
-  color: #11aaac;
+  // color: #11aaac;
   margin: 0px 0px 4px 0px;
   padding: 0px 0px 0px 0px;
 }
