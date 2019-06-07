@@ -1,6 +1,6 @@
 {
   "name": "va79-base-theme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Va79 Base theme",
   "main": "index.js",
   "keywords": [],
@@ -29,6 +29,7 @@
     "purecss": "^1.0.0",
     "sass": "^1.20.1",
     "sass-loader": "^7.1.0",
-    "source-map": "^0.7.3"
+    "source-map": "^0.7.3",
+    "vanilla-lazyload": "^12.0.0"
   }
 }
