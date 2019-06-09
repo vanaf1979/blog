@@ -23,6 +23,9 @@
                     <a href="https://github.com/vanaf1979" title="Github" class="fab fa-github" target="_blank"></a>
                 </li>
                 <li>
+                    <a href="https://profiles.wordpress.org/vanaf1979/" title="WordPress" class="fab fa-wordpress" target="_blank"></a>
+                </li>
+                <li>
                     <a href="https://dev.to/vanaf1979" title="Dev.to" class="fab fa-dev" target="_blank"></a>
                 </li>
                 <li>
