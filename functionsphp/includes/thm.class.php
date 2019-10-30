@@ -89,7 +89,7 @@ class Thm {
     public function get_posts( $post = null , $callback = null ) {
 
         $args = array(
-            'posts_per_page'   => 20,
+            'posts_per_page'   => 40,
             'orderby'          => 'date',
             'order'            => 'DESC',
             'post_type'        => 'post',
